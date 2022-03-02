@@ -1,6 +1,12 @@
 # Password-Generator
 This project involves: <strong>html, css, and javascript</strong> to create a password generator.
 <br>
+I dont know Javascript well enough to do it on my own so I chose someone to follow to further understand the logic of it.
+<br>
+We chose to follow along with WebDevSimplified Build A Password Generator With JavaScript - Tutorial. 
+if you would like to see it as well you can view it at this link: https://www.youtube.com/watch?v=iKo9pDKKHnc&ab_channel=WebDevSimplified.
+<br>
+* This tutorial breaks down each step of javascript concerning arrays and calling functions.
 
 <h2> Context of project</h2>
 Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
