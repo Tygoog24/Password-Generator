@@ -3,7 +3,8 @@ This team project involves: <strong>html, css, and javascript</strong> to create
 <br>
 We are still novices to Javascript therefore we chose follow to someone more knowledgeable about Javascript to further understand the logic of it.
 <br>
-We chose to code along with WebDevSimplified Build A Password Generator With JavaScript - Tutorial. 
+We chose to code along with WebDevSimplified Build A Password Generator With JavaScript - Tutorial.
+<br>
 if you would like to see it as well you can view it at this link: https://www.youtube.com/watch?v=iKo9pDKKHnc&ab_channel=WebDevSimplified.
 <br>
 * This tutorial breaks down each step of javascript concerning arrays and calling functions.
