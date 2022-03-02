@@ -10,27 +10,24 @@
 </head>
 
 <body>
-    
     <div class="container">
         <h1 class="title">Password Generator</h1>
         <h3 class="password-display" id="password-display">password</h3>
-        <div class="slider_main">
+      <form>
         <label>Choose your password length <br> (minimum 8 characters, maximum 128)</label>
             <input type="range" value="8" min="8" max="128" class="slider" oninput="this.nextElementSibling.value = this.value" id="slider">
-            <output>8</output>
-     </div>
+            <output>8</output> 
 
-        <div class="Options">
-                <input type="checkbox" id="includeUppercase" name="upperCase" value="upperCase">
-                <label for="upperCase"> Upper Case</label><br>
-                <input type="checkbox" id="includeLowercase" name="lowerCase" value="lowerCase">
-                <label for="lowercase"> Lower Case</label><br>
-                <input type="checkbox" id="includeNumbers" name="Numbers" value="numbers">
-                <label for="numbers"> Numbers</label><br>
-                <input type="checkbox" id="includeSymbols" name="symbols" value="symbols">
-                <label for="symbols"> Symbol</label><br><br>
-                <button id="create">create password</button>
-            </div>
-        </div>
+     <label for="includeUppercase">includeUppercase</label> 
+     <input type="checkbox" id="includeUppercase">
+     <label for="includeLowercase">includeLowercase</label> 
+     <input type="checkbox" id="includeLowercase">
+     <label for="includeNumbers">includeNumbers</label> 
+     <input type="checkbox" id="includeNumbers">
+     <label for="includeSymbols">includeSymbols</label> 
+     <input type="checkbox" id="includeSymbols">
+     <button type="submit">Generate Password</button>
+    </form>
+    </div>
 </body>
-</html
+</html>
