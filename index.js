@@ -12,10 +12,11 @@ for (var i = 0; i <passwordlength; i++ ){
 // Create variables for passwords
 //seperate the lower case from uppercase
 let lowercase="abcdefghijklmnopqrstuvxyz"
-//seperat the numbers 
+//seperate the numbers 
 let numbers="1234567890"
 //seperate the symbols
 let symbols="!#$%&'()*+,-./:;<=>?@[]^_`{|}~"
+//seperate the uppercase
 let uppercase="ABCDEFGHIJKLMNOPQRSTUV"
 
 
