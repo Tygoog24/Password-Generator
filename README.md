@@ -1,10 +1,6 @@
 # Password-Generator
-<h2> Team Project</h2>
+<h2>Project</h2>
 This project involves: <strong>html, css, and javascript</strong> to create a password generator.
-<br>
-The team consisted of four individuals. 
-<br>
-Two who are beginners in javascript and two who are beginners in bootstrap.
 <br>
 
 <h2> Context of project</h2>
