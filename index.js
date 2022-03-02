@@ -1,21 +1,21 @@
-
-// Create variables for passwords
-//seperate the lower case from uppercase
-let lowercase="abcdefghijklmnopqrstuvxyz"
-//seperate the numbers 
-let numbers="1234567890"
-//seperate the symbols
-let symbols="!#$%&'()*+,-./:;<=>?@[]^_`{|}~"
-//seperate the uppercase
-let uppercase="ABCDEFGHIJKLMNOPQRSTUV"
+//create variables to establish a function
+const characterAmountRange = document.getElementById ('characterAmountRange')
+const characterAmountNumber = document.getElementById ('characterAmountNumber')
+const includeUppercaseElement = document.getElementById('includeUppercase')
+const includeLowercaseElement = document.getElementById('includeLowercase')
+const includeNumbersElement = document.getElementById('includeNumbersUppercase')
+const includeUSymbolsElement = document.getElementById('includeSymbols')
+const form = document.getElementById('generatedPasswordForm')
 
 
-//create function to copy text
-function copytext {
+
+//this will link number to range
+characterAmountNumber.addEventListener ('input', linkCharacterAmount)
+characterAmountRange.addEventListener ('input', linkCharacterAmount)
+
+//this will control how the slider changes alongside the number value
+function linkCharacterAmount(e) {
+    const value = e.target.value
+    characterAmountNumber.value = value
+    characterAmountRange.value = value
 }
-
-//create function to generate password
-functiontcreatepassword{
-//function will go here
-}
-
