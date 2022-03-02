@@ -29,6 +29,8 @@ body {
     align-items: center;
 }
 
+
+
 .title {
     margin:0;
     text-align:center;
@@ -58,8 +60,9 @@ label {
     justify-content: center;
     align-items: center;
     word-break: break-all;
-    border:  0.5rem;
+    border-radius: 1rem;
 }
+
 
 .btn {
     grid-column: span 2;
