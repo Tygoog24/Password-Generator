@@ -1,11 +1,12 @@
 //one way we could do it
-var character="1234567890abcdefghijklmnopqrstuvxyz!#$%&'()*+,-./:;<=>?@[]^_`{|}~"
-var passwordlength="128"
+var character="1234567890abcdefghijklmnopqrstuvxyz!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
+var passwordlength="128";
+var password="";
 
 //create a formula to generate random password
 for (var i = 0; i <passwordlength; i++ ){
     var randomnumber = Math.floor(Math.random()) * character.length);
-    password
+    password= characters.substring(randomnumber, random number +1);
 }
 ------------//ignore the above its one way we could do it
 
