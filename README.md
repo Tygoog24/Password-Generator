@@ -1,5 +1,4 @@
 # Password-Generator
-<h2>Project</h2>
 This project involves: <strong>html, css, and javascript</strong> to create a password generator.
 <br>
 
