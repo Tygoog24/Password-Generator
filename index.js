@@ -12,12 +12,6 @@ let uppercase="ABCDEFGHIJKLMNOPQRSTUV"
 
 //create function to copy text
 function copytext {
-//pulling class name from the div so the button will run
-resultcontainer.select()
-//will make the copying button functional
- document.execCommand("copy");
-//create an alert so they know they copied text
-alert("text copied to clipboard");
 }
 
 //create function to generate password
