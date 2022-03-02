@@ -39,6 +39,7 @@ function copytext {
 //create function to generate password
 function generatepassword{
 //function will go here
+    
 
 //create an alert so they know they copied text
 alert("password copied")
