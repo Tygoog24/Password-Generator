@@ -4,56 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password generator</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Password Generator</title>
+    <script src ="differentway.js" defer></script>
+    <link rel = "stylesheet" href="differentway.css">
 </head>
-
 <body>
-   
     <div class="container">
-        <h2>Password Generator</h2>
-            <input type="text" class="output" value=""/>
-
-    <div class="generatorContainer">
-        <button id="copy" onclick="copied()">copy</button>
-    </div>
-    
-
-    <div class="options">
-        <div class="option"></div>
-        <label>Choose your password length <br> (minimum 8 characters, maximum 128)</label>
-            <input type="range" value="8" min="8" max="128" class="slider" oninput="this.nextElementSibling.value = this.value" id="slider">
-            <output>8</output>
-     </div>
-
-   <!-- 
-    <div class="resultContainer">
-        <span id="result"></span>
-        <button class="btn" id="clipboard">
-            <i class="far fa-clipboard"></i>
-         </button>
-    </div>
-    
-
-    <div class="slider_main">
-        <label>Choose your password length <br> (minimum 8 characters, maximum 128)</label>
-            <input type="range" value="8" min="8" max="128" class="slider" oninput="this.nextElementSibling.value = this.value" id="slider">
-            <output>8</output>
-     </div>
- -->
-
-        <div class="Options">
-                <input type="checkbox" id="option1" name="optionUpper" value="upperCase">
-                <label for="option1"> Upper Case</label><br>
-                <input type="checkbox" id="option2" name="optionLower" value="lowerCase">
-                <label for="option2"> Lower Case</label><br>
-                <input type="checkbox" id="option3" name="optionNum" value="numbers">
-                <label for="option3"> Numbers</label><br>
-                <input type="checkbox" id="option4" name="optionSym" value="symbols">
-                <label for="option4"> Symbol</label><br><br>
-                <button id="create">create</button>
+        <h1 class="title">Password Generator</h1>
+        <h3 class="password-display" id="password-display">password</h3>
+        <form id="generatedPasswordForm" class="form">
+            <label for="characterAmountNumber">Number of Characters</label>
+            <div class="character-amount-container">
+                <input type="range" min="8" max="128" value="8" id="characterAmountRange">
+                <input class="number-input" type="number" min="8" max="128" value="8" id="characterAmountNumber">
             </div>
-        </div>
+
+            <label for="">Include Uppercase</label>
+            <input type="checkbox" id="includeUppercase">
+
+            <label for="">Include Lowercase</label>
+            <input type="checkbox" id="includeLowercase">
+
+            <label for="">Include Numbers</label>
+            <input type="checkbox" id="includeNumbers">
+
+            <label for="">Include Symbols</label>
+            <input type="checkbox" id="includeSymbols">
+
+            <button type="submit" class="btn">Create Password</button>
+        </form>
+    </div>
+    
 </body>
 </html>
