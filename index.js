@@ -7,8 +7,6 @@ const includeNumbersElement = document.getElementById('includeNumbersUppercase')
 const includeUSymbolsElement = document.getElementById('includeSymbols')
 const form = document.getElementById('generatedPasswordForm')
 
-
-
 //this will link number to range
 characterAmountNumber.addEventListener ('input', linkCharacterAmount)
 characterAmountRange.addEventListener ('input', linkCharacterAmount)
