@@ -3,6 +3,8 @@ This team project involves: <strong>html, css, and javascript</strong> to create
 <br>
 Four people came together to create a password generator.
 <br>
+2 who learned javascript & 2 who learned Bootstrap
+<br>
 
 ## User Story
 
