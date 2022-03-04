@@ -24,9 +24,9 @@ let numbers= '1234567890';
 
 
 function generatepassword () {
-    //lets the computer know all the variables we want pulled
-    let allcharacters= "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-123456789abcdefghijklmnopqrstuvwxyz" ;
-    //we are trying to slice characters and get a string of values that are equal to the password length
+  //lets the computer know all the variables we want pulled
+   let allcharacters= "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-123456789abcdefghijklmnopqrstuvwxyz" ;
+  //we are trying to slice characters and get a string of values that are equal to the password length
    let random = Math.floor(Math.random() * 20);
    let newchar = allcharacters.slice(random, 20);
    console.log (newchar);
@@ -63,7 +63,7 @@ function generatepassword () {
         document.getElementById('showpassword').innerText = allcharacters.slice(random, random + +passwordLength.value);
     }
     
-        else if (includeUppercase.checked && includeSymbols.checked) {
+     else if (includeUppercase.checked && includeSymbols.checked) {
         let random = Math.floor(Math.random() * 20);
         let allcharacters = uppercase + symbol;
         document.getElementById('showpassword').innerText = allcharacters.slice(random, random + +passwordLength.value);
