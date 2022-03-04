@@ -44,7 +44,7 @@ label {
     align-items:center;
 }
 
-.password-display {
+.showpassword {
     background-color: white;
     color:black;
     padding: 1rem;
