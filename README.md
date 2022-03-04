@@ -1,5 +1,5 @@
 # Password-Generator
-This team project involves: <strong>html, css, and javascript</strong> to create a password generator.
+This team project involves: <strong>html, css, and javascript</strong>.
 <br>
 Four people came together to create a password generator.
 <br>
