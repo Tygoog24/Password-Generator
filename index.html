@@ -6,41 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password generator</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body>
-    <h2>Password Generator</h2>
-
     <div class="container">
-        <input type="text" name="" placeholder="create a password" id="password"/>
+    <h1 class="title">Password Generator</h1>
+    <h3 class="showpassword" id="showpassword">password</h3>
+    <div id="passwordGeneratorDiv" class="passwordGeneratorDiv">
+        <label for ="characterAmountNumber">character length</label>
+        <input type="range" value="8" min="8" max="128" class="slider" oninput="this.nextElementSibling.value = this.value" id="slider">
+        <output>8</output>
+        
+        <label for="includeUppercase">includeUppercase</label> 
+        <input type="checkbox" id="includeUppercase">
+        
+        <label for="includeLowercase">includeLowercase</label> 
+        <input type="checkbox" id="includeLowercase">
+        
+        <label for="includeNumbers">includeNumbers</label> 
+        <input type="checkbox" id="includeNumbers">
+        
+        <label for="includeSymbols">includeSymbols</label> 
+        <input type="checkbox" id="includeSymbols">
+        
+        <button id="submit" onclick="generatepassword();">Generate Password</button>
+       </div>
     </div>
-
-    <div class="resultContainer">
-        <span id="result"></span>
-        <button class="btn" id="clipboard">
-            <i class="far fa-clipboard"></i>
-         </button>
-    </div>
-    
-
-    <div class="slider_main">
-        <label>Choose your password length <br> (minimum 8 characters, maximum 128)</label>
-            <input type="range" value="8" min="8" max="128" class="slider" oninput="this.nextElementSibling.value = this.value" id="slider">
-            <output>8</output>
-     </div>
-
-        <div class="Options">
-                <input type="checkbox" id="option1" name="optionUpper" value="upperCase">
-                <label for="option1"> Upper Case</label><br>
-                <input type="checkbox" id="option2" name="optionLower" value="lowerCase">
-                <label for="option2"> Lower Case</label><br>
-                <input type="checkbox" id="option3" name="optionNum" value="numbers">
-                <label for="option3"> Numbers</label><br>
-                <input type="checkbox" id="option4" name="optionSym" value="symbols">
-                <label for="option4"> Symbol</label><br><br>
-                <button id="create">create</button>
-            </div>
-        </div>
 </body>
 </html>
