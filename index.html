@@ -8,33 +8,25 @@
     <link rel="stylesheet" href="styles.css">
     <script src="index.js" defer></script>
 </head>
-
 <body>
     <div class="container">
     <h1 class="title">Password Generator</h1>
     <h4 class="showpassword" id="showpassword">generated password will appear here</h4>
-
         <div id="passwordGeneratorDiv" class="passwordGeneratorDiv">
             <div>
                 <label for ="characterAmountNumber">Character Length</label>
                 <input type="range" value="8" min="8" max="128" class="slider" oninput="this.nextElementSibling.value = this.value" id="slider">
                 <output>8</output>
             </div>
-
             <br>
-            
-            <label for="includeUppercase">Include Uppercase</label> 
+            <label for="includeUppercase">Include Uppercase</label>
             <input type="checkbox" id="includeUppercase">
-            
-            <label for="includeLowercase">Include Lowercase</label> 
+            <label for="includeLowercase">Include Lowercase</label>
             <input type="checkbox" id="includeLowercase">
-            
-            <label for="includeNumbers">Include Numbers</label> 
+            <label for="includeNumbers">Include Numbers</label>
             <input type="checkbox" id="includeNumbers">
-            
-            <label for="includeSymbols">Include Symbols</label> 
+            <label for="includeSymbols">Include Symbols</label>
             <input type="checkbox" id="includeSymbols">
-            
             <button id="submit" onclick="generatepassword();">Generate Password</button>
        </div>
     </div>

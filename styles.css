@@ -9,6 +9,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
 .container {
     background-color: lightpink;
     padding: 3rem;
@@ -18,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction:column;
-}
+  }
 
 .passwordGeneratorDiv {
     display:grid;
@@ -27,6 +28,7 @@ body {
     column-gap: 3rem;
     justify-content: center;
     align-items: center;
+    width: 95%;  
 }
 
 .showpassword {
@@ -36,12 +38,6 @@ body {
 .title {
     margin:0;
     text-align:center;
-}
-
-.slider {
-    display: inline-flex;
-    align-items:center;
-    width: 90%;
 }
 
 .showpassword {
@@ -57,6 +53,12 @@ body {
     word-break: break-all;
     border-radius: 1rem;
 }
+
+.slider {
+    align-items:center;
+    width: 240px;
+}
+
 
 #submit {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
