@@ -8,19 +8,16 @@ body {
     align-items: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
-
 .container {
     background-color: lightpink;
-    padding: 3rem;
+    padding: 4rem;
     border-radius: 1rem;
     border: 4px solid green;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction:column;
-  }
-
+}
 .passwordGeneratorDiv {
     display:grid;
     grid-template-columns: auto auto;
@@ -28,18 +25,17 @@ body {
     column-gap: 3rem;
     justify-content: center;
     align-items: center;
-    width: 95%;  
 }
-
 .showpassword {
     font-style: italic;
 }
-
 .title {
     margin:0;
     text-align:center;
 }
-
+.slider {
+    width:240px;
+}
 .showpassword {
     background-color: white;
     color:black;
@@ -53,13 +49,6 @@ body {
     word-break: break-all;
     border-radius: 1rem;
 }
-
-.slider {
-    align-items:center;
-    width: 240px;
-}
-
-
 #submit {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: lightgreen;
@@ -71,18 +60,15 @@ body {
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
-    align-items: center;
+    align-items: flex;
 }
-
 #submit:hover {
     background-color: green;
     align-items: center;
 }
-
 #submit:active {
-  background-color: #3e8e41;
+  background-color: #3E8E41;
   box-shadow: 0 8px #555;
   transform: translateY(4px);
   align-items: center;
 }
-
