@@ -24,15 +24,9 @@ let uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let lowercase = 'abcdefghijklmnopqrstuvwxyz';
 let numbers= '1234567890';
 
-// we have 52 letters, 10 numbers, and 11 symbols
-//we have 73 characters in total
-//user can pick password between 8 characters and 128 characters for length
-//we want to give them a random assorted password that allows them to choose uppercase, lowercase, numbers and symbols
-
 
 //if uppercase letters are pulled, then is random uppercase character
 function getUppercase(length) {
-    let uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let passwordResult = '';
     for ( let i = 0; i < length; i++ ) {
         passwordResult += uppercase.charAt(Math.floor(Math.random() * uppercase.length));
@@ -41,12 +35,11 @@ function getUppercase(length) {
     return passwordResult;
 
 }
-getUppercase(8);
+
 
 
 //generate random lowercase letters
 function getLowercase(length) {
-    let lowercase = 'abcdefghijklmnopqrstuvwxyz';
     let passwordResult = '';
     for ( let i = 0; i < length; i++ ) {
         passwordResult += lowercase.charAt(Math.floor(Math.random() * lowercase.length));
@@ -55,11 +48,10 @@ function getLowercase(length) {
     return passwordResult;
 
 }
-getLowercase(16);
 
-//generate random lowercase letters
+
+//generate random symbols letters
 function getSymbols(length) {
-    let symbols = '!@#$%^&*()-';
     let passwordResult = '';
     for ( let i = 0; i < length; i++ ) {
         passwordResult += symbols.charAt(Math.floor(Math.random() * symbols.length));
@@ -68,12 +60,11 @@ function getSymbols(length) {
     return passwordResult;
 
 }
-getSymbols(20);
 
 
-//generate random lowercase letters
+
+//generate random numbers letters
 function getNumbers(length) {
-    let numbers= '1234567890';
     let passwordResult = '';
     for ( let i = 0; i < length; i++ ) {
         passwordResult += numbers.charAt(Math.floor(Math.random() * numbers.length));
@@ -82,89 +73,234 @@ function getNumbers(length) {
     return passwordResult;
 
 }
+//console.log to check if the variables and their values are correct
 console.log('passwordLength',passwordLength.value);
 getNumbers(passwordLength.value);
 
-
-/*
-function generatepassword {
-    for (let i=0; i< length; i++ ) { 
-        passwordResult+= Math.floor(Math.random()* .length);
-    }
-    getSymbols ();
-    getNumbers();
-    getLowercase();
-    getUppercase();
-    }
-}
-
-
-
-/*
-function generatepassword () {
-//lets the computer know all the variables we want pulled
-let allcharacters= "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-123456789abcdefghijklmnopqrstuvwxyz" ;
-//we are trying to slice characters and get a string of values that are equal to the password length
-console.log(Math.floor(Math.random()*(allcharacters.length-1)));
-document.getElementById('showpassword').innerText = allcharacters;
-console.log ("allcharacters", allcharacters);
 console.log ("uppercase",uppercase);
 console.log ("uppercase+ lowercase",uppercase + lowercase);
 console.log ("numbers",numbers);
-console.log ("symbol",symbol);
+console.log ("symbols",symbols);
 console.log ('lowercase',includeLowercase.checked);
 console.log ('uppercase', includeUppercase.checked)
 console.log ('numbers', includeNumbers.checked);
-console.log ('symbol', includeSymbols.checked);
+console.log ('symbols', includeSymbols.checked);
 
-
+//function to generate the user's password
+function generatepassword() {
 
    if(includeUppercase.checked && includeLowercase.checked && includeNumbers.checked && includeSymbols.checked) {
     console.log ("a");
-    let allcharacters= "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-123456789abcdefghijklmnopqrstuvwxyz" ;
-    document.getElementById('showpassword').innerText =Math.floor(Math.random()*(allcharacters.length-1));
-
-
-
-    let uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    console.log(Math.floor(Math.random()*(uppercase.length-1)));
-    let lowercase = 'abcdefghijklmnopqrstuvwxyz';
-    console.log(Math.floor(Math.random()*(lowercase.length-1)));
-    let symbol = '!@#$%^&*()-';
-    console.log(Math.floor(Math.random()*(symbols.length-1)));
-    let numbers= '1234567890';
-    console.log(Math.floor(Math.random()*(numbers.length-1)));
-
-
-    //if all the above condition is met all characters will be sliced to the h3 id of showpassword
-    let allcharacters= "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-123456789abcdefghijklmnopqrstuvwxyz" ;
-    document.getElementById('showpassword').innerText = allcharacters;
-   }
+    let newcharacters= getUppercase(passwordLength.value) + getLowercase(passwordLength.value) + getNumbers(passwordLength.value) + getSymbols(passwordLength.value);
+    console.log("newcharacters", newcharacters);
+    let newpassword = '';
+    length = passwordLength.value;
+    for ( let i = 0; i < length; i++ ) {
+        newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+    }
+    document.getElementById('showpassword').innerText=newpassword;
+    console.log ("generatepassword", newpassword);
+    return newpassword;
+    }
 
     else if(includeUppercase.checked && includeLowercase.checked) {
-        let lowercase = 'abcdefghijklmnopqrstuvwxyz';
-        let uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        document.getElementById('showpassword').innerText = Math.floor(Math.random()*(lowercase + uppercase.length-1));
-return;
-
+        console.log ("b");
+        let newcharacters= getUppercase(passwordLength.value) + getLowercase(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
     }
-    else if (includeNumbers.checked && includeSymbols.checked) {
-        let random = Math.random()*(numbers&& symbols.length-1)
-        let allcharacters = numbers + symbol;
-        document.getElementById('showpassword').innerText = Math.floor(Math.random()*(lowercase && uppercase.length-1));
+
+    else if(includeUppercase.checked && includeLowercase.checked && includeNumbers.checked) {
+        console.log ("c");
+        let newcharacters= getUppercase(passwordLength.value) + getLowercase(passwordLength.value) + getNumbers(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
     }
 
-    else if (includeLowercase.checked && includeSymbols.checked) {
+    else if(includeUppercase.checked && includeSymbols.checked && includeNumbers.checked) {
+        console.log ("d");
+        let newcharacters= getUppercase(passwordLength.value) + getSymbols(passwordLength.value) + getNumbers(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
+        
+    }
+
+    else if(includeUppercase.checked && includeLowercase.checked && includeSymbols.checked) {
+        console.log ("e");
+        let newcharacters= getUppercase(passwordLength.value) + getLowercase(passwordLength.value) + getSymbols(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
+    }
+
+    else if(includeUppercase.checked && includeNumbers.checked) {
+        console.log ("f");
+        let newcharacters= getUppercase(passwordLength.value) + getNumbers(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
+    }
+    else if(includeUppercase.checked && includeSymbols.checked) {
+        console.log ("g");
+        let newcharacters= getUppercase(passwordLength.value) + getSymbols(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
+    }
+    else if(includeLowercase.checked && includeNumbers.checked) {
+        console.log ("h");
+        let newcharacters= getLowercase(passwordLength.value) + getNumbers(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
+    }
+
+    else if(includeLowercase.checked && includeSymbols.checked) {
+        console.log ("i");
+        let newcharacters= getLowercase(passwordLength.value) + getSymbols(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
     }
     
-    else if (includeUppercase.checked && includeSymbols.checked) {
-    }
+    else if(includeLowercase.checked && includeNumbers.checked && includeSymbols.checked) {
 
-    else if (includeUppercase.checked && includeNumbers.checked) {
-    }
+        console.log ("j");
+        let newcharacters= getLowercase(passwordLength.value) + getNumbers(passwordLength.value) + getSymbols(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
+        }
 
-    else if (includeLowercase.checked && includeNumbers.checked) {
+    else if(includeNumbers.checked && includeSymbols.checked) {
+
+        console.log ("k");
+        let newcharacters= getNumbers(passwordLength.value) + getSymbols(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
+    }
+    else if(includeSymbols.checked) {
+
+        console.log ("L");
+        let newcharacters= getSymbols(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
+    }
+    else if(includeUppercase.checked) {
+
+        console.log ("m");
+        let newcharacters= getUppercase(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
+    }
+    else if(includeLowercase.checked) {
+
+        console.log ("n");
+        let newcharacters= getLowercase(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
+    }
+    else if(includeNumbers.checked) {
+
+        console.log ("o");
+        let newcharacters= getNumbers(passwordLength.value);
+        console.log("newcharacters", newcharacters);
+        let newpassword = '';
+        length = passwordLength.value;
+        for ( let i = 0; i < length; i++ ) {
+            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
+        }
+        document.getElementById('showpassword').innerText=newpassword;
+        console.log ("generatepassword", newpassword);
+        return newpassword;
+    }
+    else {
+        alert("Please Check at least one box");
+
     }
 }
-
-*/
