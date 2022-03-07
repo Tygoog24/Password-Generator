@@ -1,7 +1,6 @@
 # Password-Generator
 This team project involves: <strong>html, css, and javascript</strong>.
 <br>
-
 We were provided with a scenario to provide a client with the ability to obtain a strong password.
 <br>
 
