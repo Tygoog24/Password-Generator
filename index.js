@@ -228,7 +228,6 @@ function generatepassword() {
         console.log ("generatepassword", newpassword);
         return newpassword;
         }
-<<<<<<< HEAD
 
     else if(includeNumbers.checked && includeSymbols.checked) {
 
@@ -305,83 +304,3 @@ function generatepassword() {
 
     }
 }
-=======
-
-    else if(includeNumbers.checked && includeSymbols.checked) {
-
-        console.log ("k");
-        let newcharacters= getNumbers(passwordLength.value) + getSymbols(passwordLength.value);
-        console.log("newcharacters", newcharacters);
-        let newpassword = '';
-        length = passwordLength.value;
-        for ( let i = 0; i < length; i++ ) {
-            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
-        }
-        document.getElementById('showpassword').innerText=newpassword;
-        console.log ("generatepassword", newpassword);
-        return newpassword;
-    }
-    else if(includeSymbols.checked) {
-
-        console.log ("L");
-        let newcharacters= getSymbols(passwordLength.value);
-        console.log("newcharacters", newcharacters);
-        let newpassword = '';
-        length = passwordLength.value;
-        for ( let i = 0; i < length; i++ ) {
-            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
-        }
-        document.getElementById('showpassword').innerText=newpassword;
-        console.log ("generatepassword", newpassword);
-        return newpassword;
-    }
-    else if(includeUppercase.checked) {
-
-        console.log ("m");
-        let newcharacters= getUppercase(passwordLength.value);
-        console.log("newcharacters", newcharacters);
-        let newpassword = '';
-        length = passwordLength.value;
-        for ( let i = 0; i < length; i++ ) {
-            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
-        }
-        document.getElementById('showpassword').innerText=newpassword;
-        console.log ("generatepassword", newpassword);
-        return newpassword;
-    }
-    else if(includeLowercase.checked) {
-
-        console.log ("n");
-        let newcharacters= getLowercase(passwordLength.value);
-        console.log("newcharacters", newcharacters);
-        let newpassword = '';
-        length = passwordLength.value;
-        for ( let i = 0; i < length; i++ ) {
-            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
-        }
-        document.getElementById('showpassword').innerText=newpassword;
-        console.log ("generatepassword", newpassword);
-        return newpassword;
-    }
-    else if(includeNumbers.checked) {
-
-        console.log ("o");
-        let newcharacters= getNumbers(passwordLength.value);
-        console.log("newcharacters", newcharacters);
-        let newpassword = '';
-        length = passwordLength.value;
-        for ( let i = 0; i < length; i++ ) {
-            newpassword += newcharacters.charAt(Math.floor(Math.random() * newcharacters.length));
-        }
-        document.getElementById('showpassword').innerText=newpassword;
-        console.log ("generatepassword", newpassword);
-        return newpassword;
-    }
-    else {
-        alert("Please Check at least one box");
-
-    }
-}
-
-    
->>>>>>> 6abeee974ee5ee3d3bc23bca6175d57b32c8ffd6
