@@ -25,7 +25,7 @@ let lowercase = 'abcdefghijklmnopqrstuvwxyz';
 let numbers= '1234567890';
 
 
-//if uppercase letters are pulled, then is random uppercase character
+//generate random uppercase letters
 function getUppercase(length) {
     let passwordResult = '';
     for ( let i = 0; i < length; i++ ) {
