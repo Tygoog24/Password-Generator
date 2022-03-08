@@ -24,8 +24,13 @@ let uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let lowercase = 'abcdefghijklmnopqrstuvwxyz';
 let numbers= '1234567890';
 
+// we have 52 letters, 10 numbers, and 11 symbols
+//we have 73 characters in total
+//user can pick password between 8 characters and 128 characters for length
+//we want to give them a random assorted password that allows them to choose uppercase, lowercase, numbers and symbols
 
-//generate random uppercase letters
+
+//if uppercase letters are pulled, then is random uppercase character
 function getUppercase(length) {
     let passwordResult = '';
     for ( let i = 0; i < length; i++ ) {
@@ -103,7 +108,7 @@ function generatepassword() {
     return newpassword;
     }
 
-    else if(includeUppercase.checked && includeLowercase.checked) {
+    else if(includeUppercase.checked==true && includeLowercase.checked==true && includeNumbers.checked==false && includeSymbols.checked==false) {
         console.log ("b");
         let newcharacters= getUppercase(passwordLength.value) + getLowercase(passwordLength.value);
         console.log("newcharacters", newcharacters);
@@ -117,7 +122,7 @@ function generatepassword() {
         return newpassword;
     }
 
-    else if(includeUppercase.checked && includeLowercase.checked && includeNumbers.checked) {
+    else if(includeUppercase.checked && includeLowercase.checked && includeNumbers.checked && includeSymbols.checked==false) {
         console.log ("c");
         let newcharacters= getUppercase(passwordLength.value) + getLowercase(passwordLength.value) + getNumbers(passwordLength.value);
         console.log("newcharacters", newcharacters);
@@ -131,7 +136,7 @@ function generatepassword() {
         return newpassword;
     }
 
-    else if(includeUppercase.checked && includeSymbols.checked && includeNumbers.checked) {
+    else if(includeUppercase.checked && includeSymbols.checked && includeNumbers.checked && includeLowercase.checked==false) {
         console.log ("d");
         let newcharacters= getUppercase(passwordLength.value) + getSymbols(passwordLength.value) + getNumbers(passwordLength.value);
         console.log("newcharacters", newcharacters);
@@ -146,7 +151,7 @@ function generatepassword() {
         
     }
 
-    else if(includeUppercase.checked && includeLowercase.checked && includeSymbols.checked) {
+    else if(includeUppercase.checked && includeLowercase.checked && includeSymbols.checked && includeNumbers.checked==false) {
         console.log ("e");
         let newcharacters= getUppercase(passwordLength.value) + getLowercase(passwordLength.value) + getSymbols(passwordLength.value);
         console.log("newcharacters", newcharacters);
@@ -160,7 +165,7 @@ function generatepassword() {
         return newpassword;
     }
 
-    else if(includeUppercase.checked && includeNumbers.checked) {
+    else if(includeUppercase.checked && includeNumbers.checked && includeLowercase.checked==false && includeSymbols.checked==false) {
         console.log ("f");
         let newcharacters= getUppercase(passwordLength.value) + getNumbers(passwordLength.value);
         console.log("newcharacters", newcharacters);
@@ -173,7 +178,7 @@ function generatepassword() {
         console.log ("generatepassword", newpassword);
         return newpassword;
     }
-    else if(includeUppercase.checked && includeSymbols.checked) {
+    else if(includeUppercase.checked && includeSymbols.checked && includeLowercase.checked==false && includeNumbers.checked==false) {
         console.log ("g");
         let newcharacters= getUppercase(passwordLength.value) + getSymbols(passwordLength.value);
         console.log("newcharacters", newcharacters);
@@ -186,7 +191,7 @@ function generatepassword() {
         console.log ("generatepassword", newpassword);
         return newpassword;
     }
-    else if(includeLowercase.checked && includeNumbers.checked) {
+    else if(includeLowercase.checked && includeNumbers.checked && includeUppercase.checked==false && includeSymbols.checked==false) {
         console.log ("h");
         let newcharacters= getLowercase(passwordLength.value) + getNumbers(passwordLength.value);
         console.log("newcharacters", newcharacters);
@@ -200,7 +205,7 @@ function generatepassword() {
         return newpassword;
     }
 
-    else if(includeLowercase.checked && includeSymbols.checked) {
+    else if(includeLowercase.checked && includeSymbols.checked && includeUppercase.checked==false && includeNumbers.checked==false) {
         console.log ("i");
         let newcharacters= getLowercase(passwordLength.value) + getSymbols(passwordLength.value);
         console.log("newcharacters", newcharacters);
@@ -214,7 +219,7 @@ function generatepassword() {
         return newpassword;
     }
     
-    else if(includeLowercase.checked && includeNumbers.checked && includeSymbols.checked) {
+    else if(includeLowercase.checked && includeNumbers.checked && includeSymbols.checked && includeUppercase.checked==false) {
 
         console.log ("j");
         let newcharacters= getLowercase(passwordLength.value) + getNumbers(passwordLength.value) + getSymbols(passwordLength.value);
@@ -229,7 +234,7 @@ function generatepassword() {
         return newpassword;
         }
 
-    else if(includeNumbers.checked && includeSymbols.checked) {
+    else if(includeNumbers.checked && includeSymbols.checked && includeUppercase.checked==false && includeLowercase.checked==false) {
 
         console.log ("k");
         let newcharacters= getNumbers(passwordLength.value) + getSymbols(passwordLength.value);
@@ -243,7 +248,7 @@ function generatepassword() {
         console.log ("generatepassword", newpassword);
         return newpassword;
     }
-    else if(includeSymbols.checked) {
+    else if(includeSymbols.checked && includeNumbers.checked==false && includeUppercase.checked==false && includeLowercase.checked==false) {
 
         console.log ("L");
         let newcharacters= getSymbols(passwordLength.value);
@@ -257,7 +262,7 @@ function generatepassword() {
         console.log ("generatepassword", newpassword);
         return newpassword;
     }
-    else if(includeUppercase.checked) {
+    else if(includeUppercase.checked && includeNumbers.checked==false && includeSymbols.checked==false && includeLowercase.checked==false) {
 
         console.log ("m");
         let newcharacters= getUppercase(passwordLength.value);
@@ -271,7 +276,7 @@ function generatepassword() {
         console.log ("generatepassword", newpassword);
         return newpassword;
     }
-    else if(includeLowercase.checked) {
+    else if(includeLowercase.checked && includeNumbers.checked==false && includeUppercase.checked==false && includeSymbols.checked==false) {
 
         console.log ("n");
         let newcharacters= getLowercase(passwordLength.value);
@@ -285,7 +290,7 @@ function generatepassword() {
         console.log ("generatepassword", newpassword);
         return newpassword;
     }
-    else if(includeNumbers.checked) {
+    else if(includeNumbers.checked && includeSymbols.checked==false && includeUppercase.checked==false && includeLowercase.checked==false) {
 
         console.log ("o");
         let newcharacters= getNumbers(passwordLength.value);
